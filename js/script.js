@@ -20,10 +20,15 @@ if (navigator.serviceWorker) {
  */
 function myButtonClicked() {
   // input
-  const height = parseFloat(document.getElementById("height").value)
+  const value1 = parseFloat(document.getElementById("value1").value)
+  const value2 = parseFloat(document.getElementById("value2").value)
+  let counter = 0
+  let result = 0
 
-  // process
-  const volume = 2
+  while (counter < value2) {
+    result = result + value1
+    counter = counter + 1
+  }
   // output
-  document.getElementById("volume").innerHTML = "Volume is: " + volume + "mm³"
+  document.getElementById("result").innerHTML = "The result is: " + result
 }
