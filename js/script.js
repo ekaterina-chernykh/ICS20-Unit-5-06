@@ -31,11 +31,9 @@ function myButtonClicked() {
     result = result + value1pos
     counter = counter + 1
   }
-  if ((value1 < 0 && value2 > 0) || (value1 > 0 && value2 < 0))
-  {
+  if ((value1 < 0 && value2 > 0) || (value1 > 0 && value2 < 0)) {
     document.getElementById("result").innerHTML = "The result is: -" + result
-  }
-  else {
-    document.getElementById("result").innerHTML = "The result is: " + result 
+  } else {
+    document.getElementById("result").innerHTML = "The result is: " + result
   }
 }
