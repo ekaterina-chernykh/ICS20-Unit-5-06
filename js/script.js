@@ -24,11 +24,18 @@ function myButtonClicked() {
   const value2 = parseFloat(document.getElementById("value2").value)
   let counter = 0
   let result = 0
+  let value1pos = Math.abs(value1)
+  let value2pos = Math.abs(value2)
 
-  while (counter < value2) {
-    result = result + value1
+  while (counter < value2pos) {
+    result = result + value1pos
     counter = counter + 1
   }
-  // output
-  document.getElementById("result").innerHTML = "The result is: " + result
+  if ((value1 < 0 && value2 > 0) || (value1 > 0 && value2 < 0))
+  {
+    document.getElementById("result").innerHTML = "The result is: -" + result
+  }
+  else {
+    document.getElementById("result").innerHTML = "The result is: " + result 
+  }
 }
